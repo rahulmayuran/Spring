@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans   
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+ 
+  <bean id="quest" class="collection.dep.object.Question">
+  <constructor-arg value="0003" type="int"/>
+  <constructor-arg value="What is JDK"/>
+  
+  <!-- We have list interface and reference beans -->
+  <constructor-arg> 
+  	<list>
+  		<ref bean="ans1"></ref>
+  		<ref bean="ans2"></ref>
+  		<ref bean="ans3"/>
+  	</list>
+  </constructor-arg>
+  </bean>
+  
+   <!-- This bean id equates to true  -->
+  <bean id="ans1" class="collection.dep.object.Answer">
+  <constructor-arg value="00001" type="int"/>
+  <constructor-arg value="Java Development Kit"/>
+  <constructor-arg value="Mathi"/>
+  </bean>
+  
+ <bean id="ans2" class="collection.dep.object.Answer">
+ <constructor-arg value="00002" type="int"/>
+  <constructor-arg value="Java Developed Kit"/>
+  <constructor-arg value="Thingal"/>
+  </bean>
+  
+   <bean id="ans3" class="collection.dep.object.Answer">
+ <constructor-arg value="00003" type="int"/>
+  <constructor-arg value="Java Developmental Kit"/>
+  <constructor-arg value="Nilavu"/>
+  </bean>
+  
+  </beans>

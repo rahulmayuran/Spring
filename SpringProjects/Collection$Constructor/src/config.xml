@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"> 
+  
+<bean id="Quest" class="construcot.listset.Question">  
+<constructor-arg value="00001" type="int"/>  
+<constructor-arg value="What is java?"/>  
+
+<!-- We have list and value to expand and configure list elements -->
+<constructor-arg>  
+<list>  
+<value>Java is a object oriented programming language</value>  
+<value>Java is an Independent Platform</value>  
+<value>Java is an Island of Indonesia</value>  
+</list>  
+</constructor-arg>  
+
+ 
+</bean>
+
+<bean id="Quest2" class="construcot.listset.Question">
+<constructor-arg value="00002" type="int"/>  
+<constructor-arg value="What is jdk?"/> 
+<constructor-arg>  
+<list>  
+<value>Java stands for Java Development Kit</value>  
+<value>It contains JRE,Reference libraries and JVM</value>  
+<value>It helps to execute standalone and web applications of java</value>  
+</list>  
+</constructor-arg>  
+</bean>  
+  
+</beans>  
